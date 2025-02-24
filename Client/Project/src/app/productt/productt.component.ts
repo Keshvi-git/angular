@@ -16,13 +16,15 @@ export class ProducttComponent {
 
   products: any = [];
   categoryName: string = '';
-
-  // ngOnInit() {
-  //   this._route.params.subscribe((params) => {
-  //     this.categoryName = params['category'];
-  //     this.loadProducts();
-  //   });
-  // }
+  id:any=""
+  ngOnInit() {
+    this.id = this._route.snapshot.params['categoryId']
+    console.log(this.id)
+    this._api.getProductsByCategory(this.id).subscribe((res) => {
+      this.products=res
+      console.log(res)
+    });
+  }
 
   // loadProducts() {
   //   this._api.getProductsByCategory(this.categoryName).subscribe((res) => {
