@@ -1,0 +1,13 @@
+<h2>Your Cart 🛒</h2>
+
+<p *ngIf="cartItems.length === 0">Your cart is empty.</p>
+
+<ul *ngIf="cartItems.length > 0">
+  <li *ngFor="let item of cartItems">
+    <img [src]="item.image" width="50" />
+    {{ item.name }} - {{ item.quantity }} x {{ item.price | currency }}
+    <button (click)="removeFromCart(item.id)" class="btn btn-danger">Remove</button>
+  </li>
+</ul>
+
+<button *ngIf="cartItems.length > 0" (click)="clearCart()" class="btn btn-warning">Clear Cart</button>

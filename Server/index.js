@@ -23,7 +23,7 @@ mongoose.connect(process.env.DBUrl)
 		app.use('/order', OrderRoutes);
 		app.use('/cart', CartRoutes);
 		app.use('/category',CategoryRoutes)
-
+		// app.use("/api/auth", UserRoutes)
 
 		app.listen(process.env.PORT, (req, res) => {
 			console.log("Server Started")

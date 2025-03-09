@@ -1,0 +1,79 @@
+/* Ensure full-page layout */
+.container-fluid {
+  display: flex;
+}
+
+/* Sidebar styling */
+.col-md-3 {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Scrollable if content overflows */
+  background: #fff; /* Amazon-like white background */
+  padding: 20px;
+  border-right: 1px solid #ddd; /* Subtle border */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Sidebar heading */
+.col-md-3 h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Category List */
+.list-group {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Category Items */
+.list-group-item {
+  cursor: pointer;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background: #f8f9fa;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background: #6bd3e3; /* Amazon's light yellow hover */
+  color: #000;
+  font-weight: bold;
+}
+
+/* Active category styling */
+.list-group-item.active {
+  background: #ffa41b; /* Amazon's active category color */
+  color: white;
+  font-weight: bold;
+}
+
+/* Product Section */
+.col-md-9 {
+  overflow-y: auto;
+  height: 100vh; /* Ensure it scrolls */
+  padding: 20px;
+  background: #f5f5f5; /* Light gray Amazon-style */
+}
+
+/* Product Cards */
+.card {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Product Image */
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
